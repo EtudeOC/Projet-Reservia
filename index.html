@@ -4,18 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
     <title>Reservia</title>
 </head>
 <body>
-    <nav>
-       <div>
-          <div> <img src="./image/Reservia@3x.png" alt="logo Reservia"></div> 
-          <div>
-             <div><a href="#">Hébergements</a></div>
-             <div><a href="#">Activités</a></div>
-             <div><a href="#">S'inscrire</a></div>
+    <header>
+        <div>
+            <!--Logo-->
+            <img src="images/logo/Reservia@3x.png" alt="logo Reservia">
+        </div>
+        <nav>
+            <!--Menu-->
+            <ul>
+                <li>
+                    <a href="#hebergements">Hébergements</a>
+                </li>
+                <li>
+                    <a href="#activités">Activités</a>
+                </li>
+                <li>
+                    <a href="#s'inscrire">S'inscrire</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            <section de recherche>
+                <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ou en pleine nature</p>
+                <!--Zone recherche de Ville-->
+                <div class="ville_recherché">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder=" Marseille, France">
+                    <div id="bouton">Rechercher</div> 
+                </div>
+                <!--Zone de Filtrage-->
+                <div class="filtres">
+                    <h2>Filtres</h2>
+                        <div class="filtre">
+                            <i class="fas fa-money-bill-wave"></i></div>
+                            <h2>Économique</h2>
+                        </div>
+                        <div class="filtre">
+                            <i class="fas fa-child"></i></div>
+                            <h2>Familial</h2>
+                        </div>
+                        <div class="filtre">
+                            <i class="fas fa-heart"></i></div>
+                            <h2>Romantique</h2>
+                        </div>
+                        <div class="filtre">
+                            <i class="fas fa-dog"></i></div>
+                            <h2>Animaux autorisés</h2>
+                        </div>
+                    </div>
+                <br>
+                <div class="informations">
+                    <a href="#"<i class="fas fa-info"></i></a><p>Plus de 500 logements sont disponible dans cette ville</p>
+                </div>
+            </section>
+            <br>
+            <section hébergments trouvés>
+                <div id="résultats">
+                    <h2>Hébergements à Marseille</h2>
+                </div>
+                <div class="pannel hébergement">
+                    <a href="#" class="hotel">
+                        <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="heb1">
+                        <div class="détails">
+                            <h4>Auberge la Cannebière</h4>
+                            <p>Nuit à partir de <strong>25$</strong></p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </a>
 
-    </nav>
+                </div>
+            </section>
+
+    </main>
+    <footer></footer>
 </body>
 </html>
