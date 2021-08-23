@@ -1,16 +1,19 @@
-/* GENERAL */
-
+/* GENERAL */ 
 body {
-    font-family:"Raleway", sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: "Raleway", sans-serif;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    margin: auto;
 }
-header, section, aside {
+header, section, aside, .section2 {
     margin-left: 1rem;
     margin-right: 1rem;
 }
 header {
     display: flex;
+    height: 6rem;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -21,33 +24,12 @@ header img {
     margin-bottom: 1.5rem;
 }
 header nav ul {
-    width: 30rem;
+    width: 30;
     margin-bottom: 1rem;
     list-style: none;
     display: flex;
+    align-items: flex-start;
     justify-content: flex-end;
-}
-header nav ul li a {
-    color: #000;
-    text-decoration: none;
-    font-weight: lighter;
-}
-header nav ul li .nav1 a:visited {
-    color: gray;
-}
-header nav ul li a .nav1 a:hover {
-    color: #0065FC;
-}
-header nav ul li .nav2 a {
-    color: gray;
-    border-top: 3px solid #0065FC;
-}
-header nav ul li .nav2 a {
-    color: #0065FC;
-    font-weight: normal;
-}
-header nav ul li .nav1 a:hover {
-    border-top: 3px solid #0065FC;
 }
 header nav ul li {
     text-align: center;
@@ -55,39 +37,410 @@ header nav ul li {
     width: 8rem;
     padding-top: 2rem;
 }
-
+header nav ul li .navigation{
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    border-top: #ffffff 2px solid;           
+}
+header nav ul li .navigation:hover{
+    color: #0065FC;
+    border-color: #0065FC;
+}
+header nav ul li .singup{
+    color: #0065FC;
+    font-weight: normal;
+    padding: 50px 30px 0 0;
+    text-decoration: none;
+    text-align: right;
+}
+/* rechercher votre hébergement */
+.recherche > h1 {
+    padding: 0px 5px;
+}
+.recherche > p {
+    padding: 0px 5px;
+}
+.ville {
+    display: flex;
+    height: 2rem;
+    width: 25rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.ville {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 2px solid #deebff;
+    border: none;
+}
+.ville > i {
+    height: 30px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px 0 0 15px;
+    background-color: #ddd;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    border: none;
+}
+.ville > input {
+    height: 42px;
+    padding: 2px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    font-weight: bold;
+    border-top: solid #ddd 1px;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px #ddd solid;
+    text-align: justify;
+}
+#bouton{
+    background-color: #0065FC;
+    text-align: center;
+    color: white;
+    border-radius: 0 15px 15px 0;
+    padding-top: 15px;
+    margin-left: 0px;
+    width: 120px;
+    height: 31px;
+    cursor: pointer;
+    padding-bottom: 2px;
+    padding-left: 10px;
+} 
 .filtres {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .filtre {
-    margin-right: 10px;
-    border-radius: 25px;
-    border: 1px solid gray;
+    align-items: center;
     display: flex;
+    flex-direction: row;
+    border-radius: 45px;
+    border: 1px solid #deebff;
+    margin-right: 20px;
+    height: 40px;
+    font-size: 11px;
+    font-weight: bold;
 }
 .filtre > h2 {
-    padding: 5px 10px;
-    margin: 0;
+    padding: 10px;
+    margin: 5px 10px;
 }
 .filtres > h2 {
-    margin: 0;
-    padding: 0;
-    margin-right: 10px;
+    margin: 5px;
+    margin-right: 20px;
+    font-size: 20px;
 }
 .filtre > i {
     height: 28px;
     width: 28px;
-    border-radius: 19px;
-    background-color: #8bafe4;
-    padding-top: 10px;
+    border-radius: 20px;
+    background-color: #deebff;
+    padding-top: 11px;
+    padding-bottom: 1px;
     padding-left: 10px;
-    color: blue;
+    color: #0065FC;
 }
-
+.filtre:hover {
+    box-shadow: 3px 3px 12px rgba(0, 101, 252, 0.30),3px 3px 12px rgba(0, 101, 252, 0.1);
+    border-radius: 16px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.informations {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+#infoicon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:start;
+    color: #0065FC;
+    cursor: pointer;
+    border-radius: 100%;
+    border: #F2F2F2 solid 1px;
+}
+#infotext {
+    margin: 0px;
+    padding: 0 0 40px 10px;
+}
+/* HEBERGEMENTS */
+section hébergement {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    height: auto;
+    margin-bottom: 2rem;
+}
+.hebergement {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    height: 100%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);
+}
+.pannel-hebergement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    margin: 0.5rem;
+}
+section .hebergement > h2 {
+    display: inline-block;
+    width: 100%;
+    margin-left: 2rem;
+    align-items: flex-start;
+}
+section .hebergement > h4 {
+    font-weight: bolder;
+}
+section .hebergement a {
+    color: black;
+    text-decoration: none;
+}
+section .hebergement .hotel {
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    width: 28%;
+    height: fit-content;
+    padding-bottom: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30),3px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+section .hebergement .hotel:hover {
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.30),3px 3px 12px rgba(0, 0, 0, 0.1);
+}
+section .hebergement .hotel img {
+    border-radius: 10px 10px 0 0;
+    height: 100px;
+    width: 200px;
+    object-fit: cover;
+}
+section .hebergement .hotel .détails {
+    padding-left: 0.5rem;
+    line-height: 0.5rem;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 30%;
+    margin: 0px;
+    padding-bottom: 30px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);
+}
+section .hebergement i, aside .détailpop i {
+    color: #0065FC;
+}
+section .hebergement .unrated i, aside .détailpop .unrated i {
+    color: #f0e3e3
+} 
+.asidetitre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+aside .hotelpop {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 5px;
+    background: #FFF;
+    border-radius: 10px;
+    height: 135px;
+    max-width: 350px;
+    width: fit-content;
+    font-size: 0.9rem;
+}
+aside .hotelpop .détailpop {
+    padding-bottom: 0;
+    padding-left: 20px;
+    height: 100%;
+    display: inline-block;
+    align-items: flex-start;
+    height: fit-content;
+}
+aside img {
+    object-fit: fill;
+    width: 150px;
+    max-height: 150px;
+    border-radius: 10px 0 0 10px;
+}
+aside .hotelpop:hover {
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.30),3px 3px 12px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.4s;
+}
+.section2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+    margin-bottom: 4rem;
+}
+.section2 .activités h3 {
+    display: inline-block;
+    width: 100%;
+    align-items: flex-start;
+}
+.section2 .activités {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 80%;
+}
+.section2 .activiteshotel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.section2 .activites .col1 {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    height: 500px;
+    width: 22%;
+    border-radius: 15px;
+    margin: 10px 0 10px 0;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30),3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+.section2 .col1 img {
+    border-radius: 10px 10px 0 0;
+    height: 90%;
+    object-fit: cover;
+}
+.section2 .col1 .lieu {
+    padding-left: 1rem;
+}
+.section2 .activites .col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 22%;
+    height: 500px;
+    border-radius: 15px;
+    margin: 10px 46px 10px 46px;
+}
+.article2 .activites .col4 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 22%;
+    height: 500px;
+    border-radius: 15px;
+    margin: 10px 0px 10px 46px;
+}
+.col2 .img1, .col4 .img2 {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    height: 55%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30),3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+.col2 .img1 img, .col4 .img2 img {
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+col2 .img2 img, .col4 .img1 img {
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.col2 .img2, .col4 .img1 {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    height: 35%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30),3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+.col2 .lieu, .col4 .lieu{
+    padding-left: 1rem;
+}
+.section2 .activités .col1:hover, .col2 .img1:hover, .col2 .img2:hover, .col4 .img1:hover, .col4 .img2:hover {
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.30),3px 3px 12px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.4s;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #F2F2F2;
+    margin-top: auto;
+    width: 100%;
+}
+footer div {
+    display: block;
+    width: 30%;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+footer div ul {
+    list-style: none;
+    line-height: 1.5rem;
+    padding: 0;
+}
+footer div ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem
+}
 
 
 
 
 
     
+
+
+
+
