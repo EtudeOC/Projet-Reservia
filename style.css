@@ -1,12 +1,14 @@
 /* GENERAL */ 
 body {
     font-family: "Raleway", sans-serif;
+    display: block;
+    width: 1200px;
     align-items: center;
     justify-content: center;
     top: 0;
     margin: auto;
 }
-header, section, aside, .section2 {
+header, article, section, .section2 {
     margin-left: 1rem;
     margin-right: 1rem;
 }
@@ -26,6 +28,7 @@ header img {
 header nav ul {
     width: 30;
     margin-bottom: 1rem;
+    height: 100%;
     list-style: none;
     display: flex;
     align-items: flex-start;
@@ -37,19 +40,28 @@ header nav ul li {
     width: 8rem;
     padding-top: 2rem;
 }
-header nav ul li .navigation{
-    width: 100%;
+header nav ul li .navigheb{
     text-decoration: none;
-    color: #000;
+    color: #0065fc;
+    font-weight: lighter;
     border-top: #ffffff 2px solid;           
 }
-header nav ul li .navigation:hover{
+header nav ul li .navigheb:hover{
     color: #0065FC;
-    border-color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+header nav ul li .navigact{
+    text-decoration: none;
+    color: #000;
+    font-weight: lighter;
+}
+header nav ul li .navigact:hover{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
 }
 header nav ul li .singup{
     color: #0065FC;
-    font-weight: normal;
+    font-weight: bold;
     padding: 50px 30px 0 0;
     text-decoration: none;
     text-align: right;
@@ -73,7 +85,7 @@ header nav ul li .singup{
     margin-bottom: 30px;
     margin-top: 20px;
     border-radius: 15px;
-    border: 2px solid #deebff;
+    border: 3px solid #deebff;
     border: none;
 }
 .ville > i {
@@ -180,13 +192,13 @@ header nav ul li .singup{
     padding: 0 0 40px 10px;
 }
 /* HEBERGEMENTS */
-section hébergement {
+section {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 .hebergement {
     display: flex;
@@ -197,7 +209,7 @@ section hébergement {
     border-radius: 20px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);
 }
-.pannel-hebergement {
+.pannel {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -206,7 +218,7 @@ section hébergement {
     height: auto;
     margin: 0.5rem;
 }
-section .hebergement > h2 {
+section .hebergement h2 {
     display: inline-block;
     width: 100%;
     margin-left: 2rem;
@@ -313,23 +325,23 @@ aside .hotelpop:hover {
     width: auto;
     margin-bottom: 4rem;
 }
-.section2 .activités h3 {
-    display: inline-block;
-    width: 100%;
-    align-items: flex-start;
-}
 .section2 .activités {
     display: flex;
     flex-direction: column;
     width: fit-content;
     height: 80%;
 }
+.section2 .activités h3 {
+    display: inline-block;
+    width: 100%;
+    align-items: flex-start;
+}
 .section2 .activiteshotel {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.section2 .activites .col1 {
+.section2 .activités .col1 {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -348,7 +360,7 @@ aside .hotelpop:hover {
 .section2 .col1 .lieu {
     padding-left: 1rem;
 }
-.section2 .activites .col2 {
+.section2 .activités .col2 {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -358,7 +370,7 @@ aside .hotelpop:hover {
     border-radius: 15px;
     margin: 10px 46px 10px 46px;
 }
-.article2 .activites .col4 {
+.section2 .activités .col4 {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -382,7 +394,7 @@ aside .hotelpop:hover {
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
-col2 .img2 img, .col4 .img1 img {
+.col2 .img2 img, .col4 .img1 img {
     height: 70%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
@@ -408,8 +420,8 @@ footer {
     bottom: 0;
     left: 0;
     box-sizing: border-box;
-    display: flex;
     flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
@@ -434,6 +446,7 @@ footer div ul li a {
     color: black;
     font-size: 0.8rem
 }
+
 
 
 
