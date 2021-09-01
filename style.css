@@ -1,32 +1,49 @@
-/* GENERAL */ 
+/* GENERAL */
 body {
     font-family: "Raleway", sans-serif;
-    display: block;
-    width: 1200px;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    margin: auto;
+    margin: 0;
+}
+.main-padding {
+    padding: 2rem 0 1rem 0;
+}
+.main-conteneur {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+h1, 
+h2, 
+h3, 
+h4 {
+    margin: 0;
 }
 header, article, section, .section2 {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-header {
+
+.header-conteneur {
     display: flex;
-    height: 6rem;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+.logo {
+    display: block;
+	width: auto;
+	margin-left: 1rem;
+    padding-top: 1rem;
 }
 header img {
     box-sizing: border-box;
     width: 6rem;
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
+header nav {
+    order: 0;
+} 
 header nav ul {
-    width: 30;
+    width: 30rem;
     margin-bottom: 1rem;
     height: 100%;
     list-style: none;
@@ -38,26 +55,28 @@ header nav ul li {
     text-align: center;
     height: 4rem;
     width: 8rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 header nav ul li .navigheb{
     text-decoration: none;
     color: #0065fc;
     font-weight: lighter;
-    border-top: #ffffff 2px solid;           
+    border-top: 2px solid #ffffff;           
 }
-header nav ul li .navigheb:hover{
+header nav ul li .navigheb:hover {
     color: #0065FC;
-    border-top: 2px solid #0065FC;
+    border-top: 3px solid #0065FC;
+    padding-top: 2.8rem;
 }
 header nav ul li .navigact{
     text-decoration: none;
     color: #000;
     font-weight: lighter;
 }
-header nav ul li .navigact:hover{
+header nav ul li .navigact:hover {
     color: #0065FC;
-    border-top: 2px solid #0065FC;
+    border-top: 3px solid #0065FC;
+    padding-top: 2.8rem;
 }
 header nav ul li .singup{
     color: #0065FC;
@@ -67,133 +86,113 @@ header nav ul li .singup{
     text-align: right;
 }
 /* rechercher votre hébergement */
-.recherche > h1 {
-    padding: 0px 5px;
-}
-.recherche > p {
-    padding: 0px 5px;
-}
-.ville {
-    display: flex;
-    height: 2rem;
-    width: 25rem;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-}
-.ville {
-    margin-bottom: 30px;
-    margin-top: 20px;
-    border-radius: 15px;
-    border: 3px solid #deebff;
-    border: none;
-}
-.ville > i {
-    height: 30px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    border-radius: 15px 0 0 15px;
-    background-color: #ddd;
-    padding-top: 15px;
-    padding-left: 5px;
-    padding-right: 10px;
-    padding-bottom: 3px;
-    cursor: pointer;
-    border: none;
-}
-.ville > input {
-    height: 42px;
-    padding: 2px;
-    margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 17px;
+.recherche-titre {
     font-weight: bold;
-    border-top: solid #ddd 1px;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px #ddd solid;
-    text-align: justify;
 }
-#bouton{
-    background-color: #0065FC;
-    text-align: center;
-    color: white;
-    border-radius: 0 15px 15px 0;
-    padding-top: 15px;
-    margin-left: 0px;
-    width: 120px;
-    height: 31px;
-    cursor: pointer;
-    padding-bottom: 2px;
-    padding-left: 10px;
-} 
+.recherche-soustitre {
+    margin-top: 0.5rem;
+}
+.recherche-form {
+    display: flex;
+	width: 26rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border-top: #f2f2f2 1px solid;
+	border-bottom: #f2f2f2 1px solid;
+	border-radius: 1rem;    
+}
+.recherche-form-icon {
+    background-color: #f2f2f2;
+	padding: 1rem 1.25rem;
+	border-radius: 1rem 0 0 1rem;
+}
+.recherche-input {
+    width: 100%;
+	border: none;
+	padding-left: 1rem;
+	font-weight: bold;
+	font-size: 100%;
+}
+.recherche-button {
+    background-color: #0065fc;
+	color: #fff;
+	border: none;
+	font-size: 17px;
+    border-radius: 0 1rem 1rem 0;
+	padding: 0 1.25rem;
+	cursor: pointer;
+}
+.fa-search-white {
+    color: #fff;
+}
+.fa-search {
+    display: none;
+}
 .filtres {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    align-items: center;
+}
+.filtres > h3 {
+    width: auto;
+	margin: 0 1.5rem 1rem 0;    
 }
 .filtre {
-    align-items: center;
     display: flex;
-    flex-direction: row;
-    border-radius: 45px;
-    border: 1px solid #deebff;
-    margin-right: 20px;
-    height: 40px;
-    font-size: 11px;
+	align-items: center;
+	margin-right: 1.5rem;
+	border: 2px solid #d9d9d9;
+	border-radius: 2rem;
+	margin-bottom: 0.75rem;
     font-weight: bold;
+    font-size: 0.85rem;
+	transition: background 0.5s;
+	cursor: pointer;    
 }
-.filtre > h2 {
-    padding: 10px;
-    margin: 5px 10px;
+.filtre > h3 {
+    margin: 0 0.75rem;
+	font-weight: bold;
 }
-.filtres > h2 {
-    margin: 5px;
-    margin-right: 20px;
-    font-size: 20px;
-}
-.filtre > i {
-    height: 28px;
-    width: 28px;
-    border-radius: 20px;
-    background-color: #deebff;
-    padding-top: 11px;
-    padding-bottom: 1px;
-    padding-left: 10px;
+.filtre-icon {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+	width: 3rem;
+	margin: -2px;
+	background-color: #deebff;
     color: #0065FC;
+	border-radius: 100%;   
 }
 .filtre:hover {
-    box-shadow: 3px 3px 12px rgba(0, 101, 252, 0.30),3px 3px 12px rgba(0, 101, 252, 0.1);
-    border-radius: 16px;
+    box-shadow:  3px 3px 12px rgba(0, 101, 252, 0.30),3px 3px 12px rgba(0, 101, 252, 0.1);
     cursor: pointer;
-    transition-duration: 0.3s;
 }
 .informations {
     display: flex;
     align-items: flex-start;
-    padding-top: 20px;
+    padding-top: 20px
 }
 #infoicon {
-    width: 20px;
-    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align:start;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
     color: #0065FC;
     cursor: pointer;
     border-radius: 100%;
-    border: #F2F2F2 solid 1px;
+    border: #F2F2F2 solid 2px;
+    margin-top: -0.3rem;    
 }
 #infotext {
     margin: 0px;
     padding: 0 0 40px 10px;
 }
 /* HEBERGEMENTS */
-section {
+.hebergements {
     display: flex;
+    flex-wrap: wrap-reverse;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
@@ -203,11 +202,10 @@ section {
 .hebergement {
     display: flex;
     flex-direction: column;
-    width: 66%;
-    height: 100%;
     background-color: #F2F2F2;
     border-radius: 20px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);
+    width: 66%;
+    height: 100%;	  
 }
 .pannel {
     display: flex;
@@ -218,11 +216,12 @@ section {
     height: auto;
     margin: 0.5rem;
 }
-section .hebergement h2 {
+section .hebergement h3 {
     display: inline-block;
     width: 100%;
     margin-left: 2rem;
     align-items: flex-start;
+    padding-top: 20px;
 }
 section .hebergement > h4 {
     font-weight: bolder;
@@ -283,6 +282,9 @@ section .hebergement .unrated i, aside .détailpop .unrated i {
     justify-content: space-between;
     padding-right: 2rem;
     padding-left: 2rem;
+}
+aside .asidetitre h3 {
+    margin-top: 20px;
 }
 aside .hotelpop {
     text-decoration: none;
@@ -452,7 +454,13 @@ footer div ul li a {
 
 
 
+
     
+@media (max-width:768px) {
+    .hebergements {
+        flex-direction: column-reverse;
+    }
+}
 
 
 
