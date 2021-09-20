@@ -1,168 +1,155 @@
 /* GENERAL */
-body {
+html {
     font-family: "Raleway", sans-serif;
-    margin: 0;
 }
-.main-padding {
-    padding: 2rem 0 1rem 0;
+body {
+    margin: 0;
+    box-sizing: border-box;
 }
 .main-conteneur {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1440px;    
 }
-h1, 
-h2, 
-h3, 
-h4 {
-    margin: 0;
-}
-header, article, section, .section2 {
-    margin-left: 1rem;
-    margin-right: 1rem;
+.main-titre {
+    padding-bottom: 1.5rem;
 }
 
+/* HEADER */
 .header-conteneur {
     display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin-top: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+h1 {
+    margin: 0;
 }
 .logo {
     display: block;
-	width: auto;
-	margin-left: 1rem;
-    padding-top: 1rem;
+    width: auto;
+    margin-left: 1rem;
 }
-header img {
-    box-sizing: border-box;
-    width: 6rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+nav {
+    order: 3;
+    width: 100%;
 }
-header nav {
-    order: 0;
-} 
-header nav ul {
-    width: 30rem;
-    margin-bottom: 1rem;
-    height: 100%;
-    list-style: none;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-header nav ul li {
-    text-align: center;
-    height: 4rem;
-    width: 8rem;
-    padding-top: 1rem;
-}
-header nav ul li .navigheb{
-    text-decoration: none;
-    color: #0065fc;
-    font-weight: lighter;
-    border-top: 2px solid #ffffff;           
-}
-header nav ul li .navigheb:hover {
-    color: #0065FC;
-    border-top: 3px solid #0065FC;
-    padding-top: 2.8rem;
-}
-header nav ul li .navigact{
-    text-decoration: none;
+nav a {
     color: #000;
-    font-weight: lighter;
-}
-header nav ul li .navigact:hover {
-    color: #0065FC;
-    border-top: 3px solid #0065FC;
-    padding-top: 2.8rem;
-}
-header nav ul li .singup{
-    color: #0065FC;
-    font-weight: bold;
-    padding: 50px 30px 0 0;
     text-decoration: none;
-    text-align: right;
+    transition: color 0.5s ease;
+}
+nav a:hover {
+    color: #0065fc;
+}   
+nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+nav li {
+	width: 50%;
+	text-align: center;
+	padding-bottom: 1rem;
+	border-bottom: 3px solid #f2f2f2;
+	transition: border 0.5s ease;
+}
+nav li:hover {
+	border-bottom: 3px solid #0065fc;
+}
+#nav-actived {
+	border-bottom: 3px solid #0065fc;
+}
+#nav-actived a {
+	color: #0065fc;
+}
+.signup {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	color: #0065fc;
+	text-decoration: none;
+	font-weight: bold;
 }
 /* rechercher votre hébergement */
 .recherche-titre {
     font-weight: bold;
 }
-.recherche-soustitre {
-    margin-top: 0.5rem;
-}
 .recherche-form {
     display: flex;
-	width: 26rem;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	border-top: #f2f2f2 1px solid;
-	border-bottom: #f2f2f2 1px solid;
-	border-radius: 1rem;    
+    width: 26rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-top: #f2f2f2 1px solid;
+    border-bottom: #f2f2f2 1px solid;
+    border-radius: 1rem;    
 }
 .recherche-form-icon {
     background-color: #f2f2f2;
-	padding: 1rem 1.25rem;
-	border-radius: 1rem 0 0 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
 }
 .recherche-input {
     width: 100%;
-	border: none;
-	padding-left: 1rem;
-	font-weight: bold;
-	font-size: 100%;
+    border: none;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 100%;
+}
+.recherche-input {
+    width: 100%;
+    border: none;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 100%;
 }
 .recherche-button {
     background-color: #0065fc;
-	color: #fff;
-	border: none;
-	font-size: 17px;
-    border-radius: 0 1rem 1rem 0;
-	padding: 0 1.25rem;
-	cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    padding: 0 1.25rem;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 .fa-search-white {
     color: #fff;
 }
-.fa-search {
-    display: none;
+.recherche-button-nom {
+    display: none; /* Masque le texte "Recherche" en version mobile */
 }
 .filtres {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
 }
 .filtres > h3 {
-    width: auto;
-	margin: 0 1.5rem 1rem 0;    
+    width: 100%;
+    margin: 0 2rem 1rem 0;    
 }
 .filtre {
     display: flex;
-	align-items: center;
-	margin-right: 1.5rem;
-	border: 2px solid #d9d9d9;
-	border-radius: 2rem;
-	margin-bottom: 0.75rem;
-    font-weight: bold;
-    font-size: 0.85rem;
-	transition: background 0.5s;
-	cursor: pointer;    
+    align-items: center;
+    margin-right: .75rem;
+    border: 2px solid #d9d9d9;
+    border-radius: 2rem;
+    margin-bottom: .75rem;
+    transition: background 0.5s;
+    cursor: pointer;    
 }
 .filtre > h3 {
-    margin: 0 0.75rem;
-	font-weight: bold;
+    margin: 0 .75rem;
+    font-weight: bold;
 }
 .filtre-icon {
     display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 3rem;
-	width: 3rem;
-	margin: -2px;
-	background-color: #deebff;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    margin: -2px;
+    background-color: #deebff;
     color: #0065FC;
-	border-radius: 100%;   
+    border-radius: 100%;   
 }
 .filtre:hover {
     box-shadow:  3px 3px 12px rgba(0, 101, 252, 0.30),3px 3px 12px rgba(0, 101, 252, 0.1);
@@ -170,8 +157,8 @@ header nav ul li .singup{
 }
 .informations {
     display: flex;
-    align-items: flex-start;
-    padding-top: 20px
+    align-items: center;
+    margin: 0.5rem 0 0 0;
 }
 #infoicon {
     display: flex;
@@ -180,32 +167,30 @@ header nav ul li .singup{
     min-width: 1.5rem;
     min-height: 1.5rem;
     color: #0065FC;
-    cursor: pointer;
     border-radius: 100%;
     border: #F2F2F2 solid 2px;
-    margin-top: -0.3rem;    
+    margin-right: 0.5rem;
+    cursor: pointer;     
 }
-#infotext {
-    margin: 0px;
-    padding: 0 0 40px 10px;
-}
+
 /* HEBERGEMENTS */
-.hebergements {
+
+.hebergement {
     display: flex;
-    flex-wrap: wrap-reverse;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
     height: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 4rem;	  
 }
-.hebergement {
-    display: flex;
+.conteneur-hebergement {
+  display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 20px;
     width: 66%;
-    height: 100%;	  
+    height: 100%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);      
 }
 .pannel {
     display: flex;
@@ -216,12 +201,14 @@ header nav ul li .singup{
     height: auto;
     margin: 0.5rem;
 }
+.détails > h4 {
+    margin-top: 0.5rem;
+}
 section .hebergement h3 {
     display: inline-block;
     width: 100%;
     margin-left: 2rem;
     align-items: flex-start;
-    padding-top: 20px;
 }
 section .hebergement > h4 {
     font-weight: bolder;
@@ -283,9 +270,6 @@ section .hebergement .unrated i, aside .détailpop .unrated i {
     padding-right: 2rem;
     padding-left: 2rem;
 }
-aside .asidetitre h3 {
-    margin-top: 20px;
-}
 aside .hotelpop {
     text-decoration: none;
     color: black;
@@ -318,6 +302,7 @@ aside .hotelpop:hover {
     box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.30),3px 3px 12px rgba(0, 0, 0, 0.1);
     transition-duration: 0.4s;
 }
+/* ACTIVITES */
 .section2 {
     display: flex;
     flex-direction: row;
@@ -449,18 +434,90 @@ footer div ul li a {
     font-size: 0.8rem
 }
 
+/*=== MEDIAS QUERIES ===*/ 
+/*--- MOBILE ---*/
+@media screen and (min-width: 660px) {
+    .main-titre {
+        width: 100%;
+    }
+
+    /*--- HEADER ---*/
+    .header-conteneur {
+        margin-top: 0; /* Supprime la marge du haut*/
+    }
+    .logo {
+        padding-top: 1.5rem;
+    }
+    nav li {
+        padding-top: 1.5rem;
+    }
+    .signup {
+        padding-top: 1.5rem;
+    }
+    nav {
+        order: 0; /* Supprime le changement d'ordre du menu */
+        width: 40%;
+        margin-left: auto; /* Place le menu sur la droite */
+    }
+    nav ul {
+		margin-top: 0;
+	}
+    nav li {
+		border-top: 3px solid #f2f2f2;
+		padding-bottom: 0; /* Supprime le padding du bas du menu */
+		border-bottom: 0; /* Supprime la bordure du bas du menu */
+	}
+    nav li:hover {
+		border-top: 3px solid #0065fc;
+		border-bottom: 0; /* Supprime la bordure du bas du menu */
+		padding-bottom: 0; /* Supprime le padding du bas du menu */
+	}
+    #nav-actived {
+		border-bottom: 0; /* Supprime la bordure du bas du menu */
+		border-top: 3px solid #0065fc;
+	}
+    .signup {
+		display: block; /* Supprime le flex de la version mobile */
+		margin-top: 0.2rem;
+	}
+    
+    /*--- FORMULAIRE ---*/
+    .recherche-form {
+        width: 26rem;
+    }
+    .recherche-button-nom {
+        display: block; /* Affiche le texte "Rechercher" du bouton */
+    }
+    .fa-search {
+        display: none; /* Supprime l'icone de loupe du bouton */
+    }
+    .recherche-button {
+        border-radius: 0 1rem 1rem 0;
+    } 
+
+    }
+
+@media (min-width: 768px) and (max-width: 1268px) {    
+
+    /*--- HEBERGEMENT ---*/
+    .conteneur-hebergement {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 0px;
+   }
+   .conteneur-hebergement {
+    height: fit-content;
+   }
 
 
+
+    
+}  
 
 
 
 
     
-@media (max-width:768px) {
-    .hebergements {
-        flex-direction: column-reverse;
-    }
-}
 
 
 
