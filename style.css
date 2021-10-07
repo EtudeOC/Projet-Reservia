@@ -8,12 +8,11 @@ body {
 }
 .main-conteneur {
     margin: 0 auto;
-    max-width: 1280px;    
+    max-width: 1268px;    
 }
 .main-padding {
     padding: 2rem 1.5rem 1vw 1.5rem;
 }
-
 
 /*--- HEADER ---*/
 .header-conteneur {
@@ -125,9 +124,9 @@ nav li:hover {
     display: flex;
     flex-wrap: wrap;
 }
-.recherche-filtre-titre {
-    width: 100%;
+.recherche-filtre-titre {  
     margin: 0 2rem 1rem 0;
+    padding: 10px;
     font-size: large;    
 }
 .filtre {
@@ -176,7 +175,6 @@ nav li:hover {
     margin-right: 0.5rem;
     cursor: pointer;     
 }
-
 /*--- HEBERGEMENTS ---*/
 .hebergement {
     display: flex;
@@ -208,13 +206,14 @@ nav li:hover {
 .hotel {
     flex: 30%;
     margin: 0.5vw;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     min-width: 180p;
     border-radius: 20px;
     background-color: white; 
     border: 5px solid white;
     height: 220px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30),3px 3px 6px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    box-shadow: 3px 3px 3px lightgrey;
 }
 .hotel img {
     object-fit: cover;
@@ -240,8 +239,7 @@ nav li:hover {
     text-decoration: none;
 }
 .hebergement .hotel-détails {
-    padding: 5px;
-    padding-left: 0.5rem;
+    margin: 0.5rem;
     line-height: 0.5rem;
 }
 
@@ -259,7 +257,6 @@ nav li:hover {
     margin: 0rem;
     background-color: #F2F2F2;
     border-radius: 20px 20px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);
 } 
 .populaire-titre {
     display: flex;
@@ -278,10 +275,11 @@ aside .fa-chart-line {
 }
 .hotelpop {
     text-decoration: none;
-    height: 150px;
+    height: 143px;
     border-radius: 20px 20px;
     margin-top: 0.5rem;
-    box-shadow: 2px 2px 2px;
+    margin-bottom: 0.5rem;
+    box-shadow: 2px 2px 2px lightgrey;
     background-color: white;
     border: 5px solid white;
     min-width: 225px;
@@ -295,20 +293,25 @@ aside .fa-chart-line {
     border-bottom-left-radius: 20px 20px;
 }
 .détailpop {
-    flex: 1;
+    display: flex;
     background-color: #fff;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;  
+    padding: 10px;
+    margin-bottom: 1rem;
+    padding-left: 1rem;  
 }
 .hotel-nom {
     margin: 0;
     font-weight: 700;
     font-size: 1.1rem;
 }
-.hotelpop:hover {
-    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.30),3px 3px 12px rgba(0, 0, 0, 0.1);
-    transition-duration: 0.4s;
+.populaire-hotel-prix {
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+}
+.populaire-hotel-rating {
+    display: flex;
+    padding: 10px;
+    padding-left: 1rem;
 }
 /*--- ACTIVITES ---*/
 
@@ -330,7 +333,7 @@ aside .fa-chart-line {
 /*--- FOOTER ---*/
 .footer-column {
     padding-bottom: 0.25rem;
-    padding-left: 0;
+    padding-left: 0.5rem;
     list-style: none;
 }
 .footer-column li {
@@ -345,9 +348,10 @@ aside .fa-chart-line {
 }
 .footer {
     background-color: #f2f2f2;
+    padding-bottom: 0.5rem;
 }
 
-/*--DESKTOP Activités --*/
+/*--DESKTOP Activités--*/
 
 .activités-conteneur-item {
     flex: 20%;
@@ -387,10 +391,8 @@ a {
     height: 60px;
 } 
 .lieu {
-    padding-left: 0.5rem;
-    display: grid;
-    grid-template-rows: 70px 70px;
-    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    display: flex;
 }
 .activités-col-2-3,
 .activités-col-5-6 {
@@ -435,7 +437,6 @@ a {
 .activités-col-6 img {
     height: 160px;
 }
-
 /*--- FOOTER ---*/
 .footer-conteneur {
     padding: 2px 3vw 0px 3vw;
@@ -444,15 +445,13 @@ a {
     margin-bottom: 1.5rem;
 }
 
-
 /*=== MEDIAS QUERIES ===*/
 
-/*--- MOBILE HEADER - FORMULAIRE ---*/
+/*---MOBILE--HEADER et FORMULAIRE---*/
 @media screen and (min-width: 600px) {   
-
 /*--- HEADER ---*/
 .header-conteneur {
-    margin-top: 0; /* Supprime la marge du haut*/
+    margin-top: 0; /*Supprime la marge du haut*/
 }
 .logo,
 nav li,
@@ -460,7 +459,7 @@ nav li,
     padding-top: 2rem;
 }
 nav {
-    order: 0; /* Supprime le changement d'ordre du menu */
+    order: 0; /*Supprime le changement d'ordre du menu */
     width: 40%;
     margin-left: auto; /* Place le menu sur la droite */
 }
@@ -484,8 +483,7 @@ nav li:hover {
 .signup {
     display: block; /* Supprime le flex de la version mobile */
     margin-top: 0.2rem;
-}
-    
+}    
 /*--- FORMULAIRE ---*/
 .recherche-form {
     width: 26rem;
@@ -532,10 +530,12 @@ nav li:hover {
 }
 .hotelpop {
     margin: 1rem 2vw;
+    margin-bottom: 0.1rem;
 }
 .hotel {
     flex: 100%;
     margin: 1rem 5vw;
+    margin-bottom: 0.1rem;
 }
 .hebergement-titre {
     margin: 2rem 5vw 0.5rem 5vw;
@@ -607,6 +607,7 @@ nav li:hover {
     border-radius: 20px 20px;
     box-shadow: 2px 2px 2px lightgrey;
     margin: 1rem 2vw;
+    margin-bottom: 1.5rem;
 }
 .activiés-col-2-3 {
     margin: 0px;
