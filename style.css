@@ -125,14 +125,13 @@ nav li:hover {
     flex-wrap: wrap;
 }
 .recherche-filtre-titre {  
-    margin: 0 2rem 1rem 0;
-    padding: 10px;
+    margin: 0.7rem 1.5rem 1rem 0;
     font-size: large;    
 }
 .filtre {
     display: flex;
     align-items: center;
-    margin-right: .75rem;
+    margin-right: 1rem;
     border: 2px solid #d9d9d9;
     border-radius: 2rem;
     margin-bottom: .75rem;
@@ -140,7 +139,7 @@ nav li:hover {
     cursor: pointer;    
 }
 .recherche-filtre-nom {
-    margin: 0 .75rem;
+    margin: 0 .78rem;
     font-weight: 700;
 }
 .filtre-icon {
@@ -468,20 +467,20 @@ nav ul {
 }
 nav li {
     border-top: 3px solid #f2f2f2;
-    padding-bottom: 0; /* Supprime le padding du bas du menu */
-    border-bottom: 0; /* Supprime la bordure du bas du menu */
+    padding-bottom: 0; 
+    border-bottom: 0; 
 }
 nav li:hover {
     border-top: 3px solid #0065fc;
-    border-bottom: 0; /* Supprime la bordure du bas du menu */
-    padding-bottom: 0; /* Supprime le padding du bas du menu */
+    border-bottom: 0; 
+    padding-bottom: 0; 
 }
 #nav-actived {
-    border-bottom: 0; /* Supprime la bordure du bas du menu */
+    border-bottom: 0; 
     border-top: 3px solid #0065fc;
 }
 .signup {
-    display: block; /* Supprime le flex de la version mobile */
+    display: block; 
     margin-top: 0.2rem;
 }    
 /*--- FORMULAIRE ---*/
@@ -489,10 +488,10 @@ nav li:hover {
     width: 26rem;
 }
 .recherche-button-nom {
-    display: block; /* Affiche le texte "Rechercher" du bouton */
+    display: block; 
 }
 .fa-search {
-    display: none; /* Supprime l'icone de loupe du bouton */
+    display: none; 
 }
 .recherche-button {
     border-radius: 0 1rem 1rem 0;
@@ -507,7 +506,7 @@ nav li:hover {
 }
 
  /*--- MOBILE HEBERGEMENT--(768px,ipad)--*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 .hebergement,
 .conteneur-hebergement,
 .populaire {
