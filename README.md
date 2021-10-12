@@ -60,7 +60,8 @@ Le navigateur Chrome a été utiliser pour ce projet, le code ne contient aucune
 
 L’ensemble du code a été versionné sur Git et déployé sur Github.
 
-Consulter l’URL suivant : 
+Consulter l’URL suivant :[https://gibfeld.github.io/GilbertFelicite_2_10082021/](https://gibfeld.github.io/GilbertFelicite_2_10082021/)
+
 
 
 
