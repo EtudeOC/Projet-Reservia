@@ -71,7 +71,7 @@ nav li:hover {
 .signup {
 	display: flex;
 	align-items: center;
-	margin-right: 1rem;
+	margin-right: 2rem;
 	margin-left: 1rem;
 	color: #0065fc;
 	text-decoration: none;
@@ -91,7 +91,8 @@ nav li:hover {
     margin-bottom: 2rem;
     border-top: #f2f2f2 1px solid;
     border-bottom: #f2f2f2 1px solid;
-    border-radius: 1rem;    
+    border-radius: 1rem;
+    justify-content: space-evenly;    
 }
 .recherche-form-icon {
     background-color: #f2f2f2;
@@ -443,8 +444,15 @@ a {
 }
 
 /*=== MEDIAS QUERIES ===*/
-
 /*---MOBILE--HEADER et FORMULAIRE---*/
+@media screen and (max-width: 667px) {
+.recherche-filtre-titre {
+    width: 100%;
+}
+.filtre {
+    margin-right: 0.7rem;
+}
+}
 @media screen and (min-width: 600px) {   
 /*--- HEADER ---*/
 .header-conteneur {
@@ -457,7 +465,7 @@ nav li,
 }
 nav {
     order: 0; /*Supprime le changement d'ordre du menu */
-    width: 40%;
+    width: 28%;
     margin-left: auto; /* Place le menu sur la droite */
 }
 nav ul {
@@ -598,12 +606,11 @@ nav li:hover {
 .activites-hotel {
     min-width: 200px;
     flex: 100%;
-    max-height: 180px;
+    max-height: 190px;
     background-color: white;
     border-radius: 20px 20px;
     box-shadow: 2px 2px 2px lightgrey;
     margin: 1rem 2vw;
-    margin-bottom: 1.5rem;
 }
 .activies-col-2-3 {
     margin: 0px;
